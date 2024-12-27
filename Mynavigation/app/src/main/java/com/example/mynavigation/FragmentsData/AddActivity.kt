@@ -1,4 +1,4 @@
-package com.example.mynavigation
+package com.example.mynavigation.FragmentsData
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,6 +6,9 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import com.example.mynavigation.DataClass.DataClassUser
+import com.example.mynavigation.DataClass.DataClassUserParcelable
+import com.example.mynavigation.R
 
 class AddActivity : Fragment(R.layout.fragment_add_activity) {
 
@@ -35,7 +38,7 @@ class AddActivity : Fragment(R.layout.fragment_add_activity) {
         val getDataSerializable = requireView().findViewById<Button>(R.id.getDataSerializable)
         getDataSerializable.setOnClickListener {
             val user= if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU)
-                arguments?.getSerializable("EXTRA_KEY_USER", com.example.mynavigation.DataClassUser::class.java) as DataClassUser
+                arguments?.getSerializable("EXTRA_KEY_USER", DataClassUser::class.java) as DataClassUser
             else arguments?.getSerializable("EXTRA_KEY_USER") as? DataClassUser
 
             val resultSerializable = view.findViewById<TextView>(R.id.resultSerializable)
@@ -45,7 +48,7 @@ class AddActivity : Fragment(R.layout.fragment_add_activity) {
         val getDataParcelable = requireView().findViewById<Button>(R.id.getDataParcelable)
         getDataParcelable.setOnClickListener {
             val user = if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU)
-                arguments?.getParcelable("EXTRA_KEY_USER1", com.example.mynavigation.DataClassUserParcelable::class.java)
+                arguments?.getParcelable("EXTRA_KEY_USER1", DataClassUserParcelable::class.java)
             else arguments?.getParcelable("EXTRA_KEY_USER1")
 
             val resultParcelable = view.findViewById<TextView>(R.id.resultParcelable)

@@ -1,4 +1,4 @@
-package com.example.mynavigation
+package com.example.mynavigation.MainActivity
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -8,7 +8,8 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.collection.emptyLongSet
+import com.example.mynavigation.DataClass.DataClassUser
+import com.example.mynavigation.DataClass.DataClassUserParcelable
 import com.example.mynavigation.databinding.ActivityMain2Binding
 
 @Suppress("INFERRED_TYPE_VARIABLE_INTO_POSSIBLE_EMPTY_INTERSECTION")

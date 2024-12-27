@@ -1,4 +1,4 @@
-package com.example.mynavigation
+package com.example.mynavigation.DataClass
 
 import android.os.Parcel
 import android.os.Parcelable

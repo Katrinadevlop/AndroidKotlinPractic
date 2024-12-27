@@ -1,4 +1,4 @@
-package com.example.mynavigation
+package com.example.mynavigation.FragmentsData
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -6,8 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
+import com.example.mynavigation.R
 import com.example.mynavigation.databinding.ActivityMain1Binding
-import com.example.mynavigation.databinding.ActivityMainBinding
 
 class MainActivity1 : AppCompatActivity() {
 

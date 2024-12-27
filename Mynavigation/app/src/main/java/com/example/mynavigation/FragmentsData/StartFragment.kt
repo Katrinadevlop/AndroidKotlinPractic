@@ -1,4 +1,4 @@
-package com.example.mynavigation
+package com.example.mynavigation.FragmentsData
 
 import android.net.Uri
 import android.os.Bundle
@@ -6,6 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import com.example.mynavigation.DataClass.DataClassUser
+import com.example.mynavigation.DataClass.DataClassUserParcelable
+import com.example.mynavigation.R
 
 class StartFragment : Fragment(R.layout.fragment_start) {
 

@@ -1,4 +1,4 @@
-package com.example.mynavigation
+package com.example.mynavigation.MainActivity
 
 import android.content.Intent
 import android.net.Uri
@@ -8,6 +8,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.mynavigation.DataClass.DataClassUser
+import com.example.mynavigation.R
 import com.example.mynavigation.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
