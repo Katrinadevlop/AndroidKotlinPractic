@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">My navigation</string>
+    <string name="result_Intent">Результат данных через Intent</string>
+    <string name="get_data">Получить данные</string>
+    <string name="send_data">Отправить данные</string>
+    <string name="result_serializable">Результат данных через Serializable</string>
+    <string name="result_parcelable">Результат данных через Parcelable</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

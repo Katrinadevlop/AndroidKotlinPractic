@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity">
+
+    <TextView
+    android:id="@+id/resultIntent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="50dp"
+    android:text="@string/result_Intent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+    android:id="@+id/getDataIntent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="110dp"
+    android:layout_marginTop="52dp"
+    android:layout_marginEnd="211dp"
+    android:text="@string/get_data"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="1.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/resultIntent" />
+
+    <Button
+    android:id="@+id/sendDataIntent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="52dp"
+    android:text="@string/send_data"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.555"
+    app:layout_constraintStart_toEndOf="@+id/getDataIntent"
+    app:layout_constraintTop_toBottomOf="@+id/resultIntent" />
+
+    <ImageView
+    android:id="@+id/imageView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.53"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/getDataIntent"
+    app:layout_constraintVertical_bias="0.057"
+    tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+    android:id="@+id/resultSerializable"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="72dp"
+    android:text="@string/result_serializable"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.534"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+    android:id="@+id/getDataSerializable"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="48dp"
+    android:text="@string/get_data"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/resultSerializable" />
+
+    <TextView
+    android:id="@+id/resultParcelable"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="44dp"
+    android:text="@string/result_parcelable"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/getDataSerializable" />
+
+    <Button
+    android:id="@+id/getDataParcelable"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="44dp"
+    android:text="@string/get_data"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/resultParcelable" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
