@@ -3,17 +3,17 @@ package com.example.navigationdrawer
 import android.os.Bundle
 import android.util.Log
 import android.widget.ImageView
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
-
-    lateinit var drawerLayout:DrawerLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,22 +25,24 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        drawerLayout = findViewById(R.id.main)
+        val drawerLayout = findViewById<DrawerLayout>(R.id.main)
         val menuButton = findViewById<ImageView>(R.id.menuButton)
 
         menuButton.setOnClickListener{
             drawerLayout.open()
         }
 
+        val fragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
+        val controller = fragment.navController
         val navidationView = findViewById<NavigationView>(R.id.navigationView)
         navidationView.setNavigationItemSelectedListener {menuItem->
             when (menuItem.itemId) {
-                R.id.Profile -> Toast.makeText(this@MainActivity, "Открылся профиль", Toast.LENGTH_SHORT).show()
-                R.id.Home -> Toast.makeText(this, "Открылся главный экран", Toast.LENGTH_SHORT).show()
-                R.id.Favorites -> Toast.makeText(this, "Открылись избранные", Toast.LENGTH_SHORT).show()
-                R.id.Books -> Toast.makeText(this, "Открылись книги", Toast.LENGTH_SHORT).show()
-                R.id.Shelves -> Toast.makeText(this, "Открылись полки", Toast.LENGTH_SHORT).show()
-                R.id.Subscription -> Toast.makeText(this, "Открылись подписки", Toast.LENGTH_SHORT).show()
+                R.id.Profile -> controller.navigate(R.id.profileFragment)
+                R.id.Home ->  controller.navigate(R.id.homeFragment)
+                R.id.Favorites ->  controller.navigate(R.id.favoritesFragment)
+                R.id.Books ->  controller.navigate(R.id.booksFragment)
+                R.id.Shelves ->  controller.navigate(R.id.shelvesFragment)
+                R.id.Subscription ->  controller.navigate(R.id.subscriptionFragment)
             }
             drawerLayout.close()
             true
